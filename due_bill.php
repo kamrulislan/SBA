@@ -1,3 +1,5 @@
+
+
 <?php
 session_start();
 include('config/dbcon.php');
@@ -65,6 +67,7 @@ $result = mysqli_fetch_assoc($data);
 
                                 <?php
                                 }
+                                //We just try to modify the due bill
                                 ?>
 
                             </select>
