@@ -1,0 +1,4 @@
+CREATE VIEW sale_statements AS SELECT sales.com_id, sales.com_name, sales.com_type, sales_bill.bil_id, sales_bill.bil_num, sales_bill.bil_date, sales_bill.bil_amount, sales_bill.paid_bill_date FROM sales_bill JOIN sales ON sales.com_id = sales_bill.com_id
+
+
+CREATE VIEW exp_all AS SELECT e.exp_id, e.exp_date, e.exp_amount, c.cat_name, s.subcat_name FROM expense AS e JOIN exp_cat AS c ON e.exp_cat_id = c.id JOIN exp_subcat AS s ON e.exp_subcat_id = s.subcat_id

@@ -1,0 +1,62 @@
+//Category table
+id
+cat_name
+
+exp_cat
+
+
+//sub category table
+subcat_id
+subcat_name
+
+exp_subcat
+
+
+
+//Expense add
+expense
+exp_id
+exp_date
+exp_cat_id
+exp_subcat_id
+exp_amount
+
+
+exp_date ,exp_cat_id ,exp_subcat_id ,exp_amount
+
+
+sales
+
+
+
+//sales_bill
+bil_id
+bil_num
+bil_date
+bil_com
+bil_amount
+bil_save 
+
+
+SELECT e.*,sc.subcat_name,ctg.cat_name
+FROM expense as e
+
+LEFT JOIN exp_cat as ctg
+
+ON e.exp_cat_id = ctg.id
+
+
+LEFT JOIN exp_subcat as sc
+ON e.exp_subcat_id = sc.subcat_id
+
+
+
+lam_bil_id
+lam_bil_num
+lam_bil_date
+lam_com_id
+lam_bil_amount
+lam_paid_bill_date
+lam_img
+
+
